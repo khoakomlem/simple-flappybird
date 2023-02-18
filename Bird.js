@@ -2,10 +2,10 @@ class Bird {
     lift = -10;
     velocity = 0;
     gravity = 0.5;
-    size = 20;
+    size = 30;
     color = 255;
 
-    constructor(x = 20, y = 300) {
+    constructor({x = 60, y = 300} = {}) {
         this.x = x;
         this.y = y;
     }

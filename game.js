@@ -1,9 +1,14 @@
 const pipes = [];
 const bird = new Bird();
-console.log(bird)
 
 function setup() {
-    createCanvas(400, 600);
+    createCanvas(1366, 768);
+    for (let i = 0; i < 5; i++) {
+        pipes.push(new Pipe({
+            x: 500 + i * 300,
+            h: random(100, height - 100)
+        }));
+    }
 }
 
 function draw() {
@@ -28,7 +33,10 @@ function draw() {
         bird.color = 255;
     }
     if (frameCount % 100 === 0) {
-        pipes.push(new Pipe());
+        pipes.push(new Pipe({
+            x: pipes[pipes.length - 1].x + 300,
+            h: random(100, height - 100)
+        }));
     }
 }
 
@@ -37,5 +45,5 @@ function mousePressed() {
 }
 
 function keyPressed() {
-  bird.flap();
+    bird.flap();
 }

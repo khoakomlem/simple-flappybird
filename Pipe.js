@@ -1,5 +1,5 @@
 class Pipe {
-    constructor(x = width, y = 0, w = 50, h = 100, gap = 160) {
+    constructor({x = width, y = 0, w = 50, h = 100, gap = 160} = {}) {
         this.x = x;
         this.y = y;
         this.w = w;
