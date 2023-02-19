@@ -1,6 +1,6 @@
 class Bird {
     constructor({
-        x = 60,
+        x = 100,
         y = 300,
         lift = -10,
         velocity = 0,
