@@ -11,16 +11,19 @@ class Pipe {
         this.width = width;
         this.height = height;
         this.gap = gap;
+        this.passed = false;
     }
 
     draw() {
         fill('green');
         rect(this.x, this.y, this.width, this.height);
+        rect(this.x - 10, this.y + this.height - 20, 20 + this.width, 20);
         rect(this.x, this.y + this.height + this.gap, this.width, height - this.height - this.gap);
+        rect(this.x - 10, this.y + this.height + this.gap, 20 + this.width, 20);
     }
 
     update() {
-        this.x -= 2;
+        this.x -= 3;
     }
 
     offscreen() {
