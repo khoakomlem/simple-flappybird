@@ -10,6 +10,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=khoakomlem.khoakomlem)
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![MIT License][license-shield]][license-url]
