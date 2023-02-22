@@ -1,0 +1,9 @@
+body {
+	overflow: hidden;
+}
+
+.p5Canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
