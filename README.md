@@ -67,7 +67,7 @@
 ## About The Project
 <img src="https://khoakomlem.github.io/simple-flappybird/public/images/screenshot.png" alt="Logo">
 
-**Flappy Bird** is a mobile video game by **Nguyen Ha Dong** - a programmer in Hanoi, Vietnam developed and by **dotGEARS**, a small-scale, independent game development studio based in Vietnam, released in 2013. The game is presented in the style of side-scrolling (game style with objects seen on the side-view and moving from the left to the right edge of the screen), in which the player controls a bird, trying to pass the rows of green pipes without touching them. Nguyen Ha Dong created _Flappy Bird_ within a few days, using a bird character he designed for a game project that was canceled in 2012.
+**Flappy Bird** is a mobile game developed by the Vietnamese video game artist and programmer Nguyen Dong, under his game development company **.Gears**. The game is a side-scroller where the player controls a bird, attempting to fly between columns of green pipes without hitting them. Nguyen Dong created the game over the period of several days, using a bird protagonist that he had designed for a cancelled game in 2012.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,7 +98,7 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    npm install
    ```
-3. Start the app
+3. Start the app, your web should be listening on http://localhost:3000
    ```sh
 	npm start
    ```
