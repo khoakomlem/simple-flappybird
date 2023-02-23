@@ -25,13 +25,12 @@
 
 class Bird {
 	constructor({
-		x = 100,
+		x = 200,
 		y = 300,
 		lift = -9,
 		velocity = 0,
 		gravity = 0.5,
-		size = 40,
-		color = 'yellow',
+		size = 50,
 	} = {}) {
 		this.x = x;
 		this.y = y;
@@ -39,13 +38,11 @@ class Bird {
 		this.velocity = velocity;
 		this.gravity = gravity;
 		this.size = size;
-		this.color = color;
 		this.image = loadImage('./images/flappybird.png');
 	}
 
 	draw() {
-		// Fill(this.color);
-		// rect(this.x, this.y, this.size, this.size);
+		// Ratio is used to keep the image's aspect ratio when resizing to this.size
 		const ratio = this.image.width / this.image.height;
 		image(this.image, this.x, this.y, this.size * ratio, this.size);
 	}
@@ -57,6 +54,7 @@ class Bird {
 
 	flap() {
 		this.velocity = this.lift; // Apply the lift force to the bird
+		sounds.flap.play();
 	}
 
 	offscreen() {

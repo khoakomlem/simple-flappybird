@@ -26,13 +26,11 @@
 class Pipe {
 	constructor({
 		x = width,
-		y = 0,
 		width = 60,
 		height = 100,
-		gap = 160,
+		gap = 200,
 	} = {}) {
 		this.x = x;
-		this.y = y;
 		this.width = width;
 		this.height = height;
 		this.gap = gap;
@@ -41,13 +39,20 @@ class Pipe {
 
 	draw() {
 		fill('green');
-		rect(this.x, this.y, this.width, this.height);
-		rect(this.x - 10, this.y + this.height - 20, 20 + this.width, 20);
-		rect(this.x, this.y + this.height + this.gap, this.width, height - this.height - this.gap);
-		rect(this.x - 10, this.y + this.height + this.gap, 20 + this.width, 20);
+		// Top pipe
+		rect(this.x, 0, this.width, this.height);
+		rect(this.x - 10, this.height - 20, 20 + this.width, 20);
+
+		// Bottom pipe
+		rect(this.x, this.height + this.gap, this.width, height - this.height - this.gap);
+		rect(this.x - 10, this.height + this.gap, 20 + this.width, 20);
 	}
 
 	update() {
+		if (isLose) { // If the bird is dead, stop moving the pipes
+			return;
+		}
+
 		this.x -= 2 * diffScale;
 	}
 
